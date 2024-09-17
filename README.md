@@ -9,7 +9,7 @@ LangChain is a Python library that allows developers to build applications utili
 ![langchain-LANGRAPH_LANGSMITH](https://github.com/user-attachments/assets/bfc31e87-63d2-443d-8da6-9f618f244869)
 
 
-### **Development**
+# **Development**
 Build your applications using LangChain's open-source building blocks, components, and third-party integrations. 
 Use **LangGraph** to build stateful agents with first-class streaming and human-in-the-loop support.
 ![cOMPONENTS OF LANGRAPH](https://github.com/user-attachments/assets/eb1498e0-5b23-459e-b9bc-b77c61f06321)
@@ -18,6 +18,7 @@ Use **LangGraph** to build stateful agents with first-class streaming and human-
 # **Deployment:** Deploy your applications to the cloud or on-premises using LangChain's cloud,
     Turn your **LangGraph** applications into production-ready APIs and Assistants with LangGraph Cloud.
     
-#### **Productionization:** Use LangSmith to inspect, monitor and evaluate your chains, so that you can continuously optimize and deploy with confidence.
+# **Productionization:** 
+Use LangSmith to inspect, monitor and evaluate your chains, so that you can continuously optimize and deploy with confidence.
 ![Langsmitch_Cover-image-2-1](https://github.com/user-attachments/assets/e5087b10-96c1-40d1-b27a-17d3dd9cbd6a)
 
