@@ -1,4 +1,4 @@
-![langchain_stack_062024_dark](https://github.com/user-attachments/assets/01671dd2-dc1e-451a-89e8-7ad801e9eb74)# Langchain_EcoSystem
+# Langchain_EcoSystem
 
 ![langchain-component](https://github.com/user-attachments/assets/fcd78c28-4770-4354-97fd-98d3bc495982)
 
