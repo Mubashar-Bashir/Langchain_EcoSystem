@@ -23,3 +23,18 @@ Use LangSmith to inspect, monitor and evaluate your chains, so that you can cont
 ![Langsmitch_Cover-image-2-1](https://github.com/user-attachments/assets/e5087b10-96c1-40d1-b27a-17d3dd9cbd6a)
 
 ![Langchain_smitch_stackk](https://github.com/user-attachments/assets/ce5b9567-cf44-441e-b70c-24da7359bd8f)
+
+# **LangChain Framework Components**
+
+Concretely, the framework consists of the following open-source libraries:
+
+- **langchain-core:** Base abstractions and LangChain Expression Language.
+- **langchain-community:** Third-party integrations.
+- **Partner packages** (e.g., `langchain-openai`, `langchain-anthropic`, etc.): 
+  Some integrations have been further split into their own lightweight packages that only depend on `langchain-core`.
+- **langchain:** Chains, agents, and retrieval strategies that make up an application's cognitive architecture.
+- **LangGraph:** Build robust and stateful multi-actor applications with LLMs by modeling steps as edges and nodes in a graph. Integrates smoothly with LangChain, but can be used without it.
+- **LangServe:** Deploy LangChain chains as REST APIs.
+- **LangSmith:** A developer platform that lets you debug, test, evaluate, and monitor LLM applications.
+
+> **Note:** The LangChain ecosystem allows you to build and deploy sophisticated LLM-powered applications efficiently.
