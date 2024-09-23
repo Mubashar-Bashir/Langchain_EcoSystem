@@ -12,13 +12,18 @@ class ContentGenerationModel:
         if not self.api_key:
             raise ValueError("API key not found in environment variables.")
         
+        # Configure the GenerativeModel with the API key
+        genai.configure(api_key=self.api_key)
+
         # Initialize the GenerativeModel
-        self.model = genai.GenerativeModel()  # Initialization as per library documentation
+        self.model = genai.GenerativeModel()  # Ensure this is the correct class per the library's documentation
 
     def generate_content(self, prompt):
         try:
             # Use the GenerativeModel to generate content
-            response: GenerateContentResponse = self.model.generate_content(prompt=prompt)
-            return response.text
+            response = self.model.generate_content(prompt)  # This method must match the library's API
+            return response  # Adjust this to match the actual response object structure
         except Exception as e:
             raise RuntimeError(f"An error occurred during content generation: {e}")
+
+    

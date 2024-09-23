@@ -2,12 +2,19 @@ import streamlit as st
 from dotenv import load_dotenv
 import os
 from models.content_generation import ContentGenerationModel
+from google.generativeai.types.generation_types import GenerateContentResponse
+from models.markdown_format import to_markdown
+
+from google.generativeai import GenerativeModel
+import google.generativeai as genai
 
 # Load environment variables
 load_dotenv()
 
+
 # Initialize the content generation model
 content_generation_model = ContentGenerationModel()
+model : GenerativeModel = genai.GenerativeModel("gemini-1.5-flash")
 
 # Set page configuration
 st.set_page_config(page_title="GeminiMind", page_icon=":brain:", layout="centered")
@@ -16,21 +23,21 @@ st.set_page_config(page_title="GeminiMind", page_icon=":brain:", layout="centere
 st.markdown("""
     <style>
         .title {
-            color: #2ecc71; /* Green color */
-            font-size: 2.5em; /* Larger font size */
-            font-weight: bold;
+            color:  #FFFFFF; /* Green color =#2ecc71 */
+            font-size: 2em; /* Larger font size */
+            font-weight: semi-bold;
             text-align: center;
-            margin-bottom: 20px;
+            
         }
         .background {
-            background: url('https://www.example.com/your-background-image.jpg') no-repeat center center fixed;
+            background: url('https://img.freepik.com/premium-photo/purple-background-with-spider-web-red-light_657790-47935.jpg?w=740') no-repeat center center fixed;
             background-size: cover;
         }
         .arrow {
-            font-size: 3em;
-            color: #2ecc71;
+            font-size: 2em;
+            color: #FFFFFF;
             text-align: center;
-            display: block;
+            display: inline;
             margin: 20px 0;
         }
         .subheader {
@@ -63,9 +70,14 @@ if option == 'Content Generation':
         if content_prompt:
             try:
                 # Generate content using the Gemini model
-                response = content_generation_model.generate_content("what is life?")
+                # response = content_generation_model.generate_content(content_prompt, stream=True)
+                response : GenerateContentResponse = model.generate_content(content_prompt, stream=True)
                 st.write("Generated Content:")
-                st.write(response.text)
+
+                for chunk in response:
+                # text =response.text
+                # formatted_markdown=to_markdown(text)
+                    st.write(chunk.text)
             except Exception as e:
                 st.error(f"An error occurred: {e}")
         else:
