@@ -79,7 +79,7 @@ if option == 'Content Generation':
 
                 for chunk in response:
                 # text =response.text
-                # formatted_markdown=to_markdown(text)
+                # formatted_markdown=to_markdown(chunk.text)
                     st.write(chunk.text)
             except Exception as e:
                 st.error(f"An error occurred: {e}")
@@ -105,7 +105,7 @@ if st.button("Image to Text"):
 
       # Display the generated content
       st.write("Generated Content:",)
-      st.write(generated_content, height=300)
+      st.write(generated_content)
 
     except Exception as e:
       st.error(f"An error occurred: {e}")
